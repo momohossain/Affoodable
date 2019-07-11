@@ -4,7 +4,7 @@ import { View, Text, ScrollView } from "react-native";
 import { Button } from "react-native-elements";
 import RestaurantCard from "../components/RestaurantCard";
 
-class Home extends Component {
+class MyReviews extends Component {
   constructor(props) {
     super(props);
     this.clicking = this.clicking.bind(this);
@@ -16,10 +16,7 @@ class Home extends Component {
 
   render() {
     return (
-      <ScrollView style={styles.container}>
-        {/* My Reviews */}
-
-        {/* Home */}
+      
         <View style={styles.header}>
           <Text style={styles.title}>Welcome back!</Text>
           <Text style={styles.subtitle}>
@@ -28,6 +25,7 @@ class Home extends Component {
           </Text>
         </View>
 
+<ScrollView style={styles.container}>
         {this.props.screenProps.restaurants.map((restaurant, index) => (
           <RestaurantCard
             key={index}
@@ -43,4 +41,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default MyReviews;
