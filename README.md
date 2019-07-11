@@ -11,7 +11,7 @@ This is a mobile app that was created using React Native! So far we have only be
 cd ios/
 pod install
 ```
-* using Xcode open affoofable.xcproj located in the ios/ folder:
+* using Xcode open affoodable.xcproj located in the ios/ folder:
   * open AppDelegate.m: affoodable/affoodable/AppDelegate.m
   * replace _YOUR_KEY_HERE_REMOVE_WHEN_PUSHING_ with your google maps API Key
 * run app: `react-native run-ios`
