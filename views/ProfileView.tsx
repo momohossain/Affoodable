@@ -1,6 +1,13 @@
-import React, { Component } from 'react';
-import { View, Text, StyleSheet,  AppRegistry, FlatList, Image, ScrollView, SafeAreaView } from 'react-native';
-import { Avatar, Card, Button, Icon, Rating, AirbnbRating } from 'react-native-elements';
+import React, { Component } from "react";
+import {
+  View,
+  Text,
+  FlatList,
+  ScrollView,
+  SafeAreaView,
+  TouchableOpacity
+} from "react-native";
+import { Avatar, ListItem } from "react-native-elements";
 import styles from "../styles/ProfileView";
 
 class ProfileView extends Component {
@@ -8,25 +15,38 @@ class ProfileView extends Component {
     return (
       <SafeAreaView style={{ flex: 1 }}>
         <ScrollView style={styles.container}>
-          <View style={styles.container}>
+          <View style={styles.header}>
             <View style={styles.centered}>
-              <Avatar rounded
-                size="medium"
-                title="AF"
-              />
+              <Avatar rounded size="large" title="AF" />
             </View>
-            <View style={styles.account}>
-              <Text>30 Reviews</Text>
-              <Text>50 Following</Text>
+            <View>
+              <View style={styles.account}>
+                <Text style={{ fontSize: 30, fontWeight: 700, color: "#fff" }}>
+                  30
+                </Text>
+                <Text style={{ fontSize: 30, fontWeight: 700, color: "#fff" }}>
+                  50
+                </Text>
+              </View>
+              <View style={styles.account}>
+                <Text style={{ color: "#fff" }}>Reviews</Text>
+                <Text style={{ color: "#fff" }}>Following</Text>
+              </View>
             </View>
+          </View>
+          <View style={styles.settings}>
             <FlatList
               data={[
-                {key: 'My Deals'},
-                {key: 'Notification Settings'},
-                {key: 'Privacy Settings'},
-                {key: 'Logout'},
+                { key: "My Deals" },
+                { key: "Notification Settings" },
+                { key: "Privacy Settings" },
+                { key: "Logout" }
               ]}
-              renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+              renderItem={({ item }) => (
+                <TouchableOpacity>
+                  <ListItem title={item.key} bottomDivider />
+                </TouchableOpacity>
+              )}
             />
           </View>
         </ScrollView>

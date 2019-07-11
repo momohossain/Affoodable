@@ -28,16 +28,18 @@ class Home extends Component {
           </Text>
         </View>
 
-        {this.props.screenProps.restaurants.map((restaurant, index) => (
-          <RestaurantCard
-            key={index}
-            title={restaurant.title}
-            img={restaurant.img}
-            hours={restaurant.hours}
-            timestamp={restaurant.timestamp}
-            clicking={this.clicking}
-          />
-        ))}
+        <View style={styles.restaurantCards}>
+          {this.props.screenProps.restaurants.map((restaurant, index) => (
+            <RestaurantCard
+              key={index}
+              title={restaurant.title}
+              img={restaurant.img}
+              hours={restaurant.hours}
+              timestamp={restaurant.timestamp}
+              clicking={this.clicking}
+            />
+          ))}
+        </View>
       </ScrollView>
     );
   }

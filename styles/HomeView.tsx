@@ -21,6 +21,10 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "500",
     color: "#fff"
+  },
+  restaurantCards: {
+    backgroundColor: "#fff",
+    paddingBottom: 30
   }
 });
 

@@ -42,7 +42,8 @@ const TabsNavigator = createBottomTabNavigator({
           size={20}
           color={tintColor}
         />
-      )
+      ),
+      headerVisible: false
     }
   }
 });

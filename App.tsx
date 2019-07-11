@@ -34,20 +34,21 @@ export default class App extends Component {
           timestamp: "20 minutes ago"
         }
       ],
-      deals: [ {
-        title: "Deal A", 
-        img: require("./img/kendall.png"),
-        description: "Ingredient 1, ingredient 2, ...",
-        updated: 15,
-        original: 30, 
-      },
-      {
-      title: "Deal B", 
-      img: require("./img/kendall.png"),
-      description: "Ingredient 1, ingredient 2, ...",
-      updated: 15,
-      original: 30, 
-      },      
+      deals: [
+        {
+          title: "Truffle Fries",
+          img: require("./img/kendall.png"),
+          description: "Potatoes, truffle, salt, pepper",
+          updated: 15,
+          original: 30
+        },
+        {
+          title: "Truffle Fries",
+          img: require("./img/kendall.png"),
+          description: "Potatoes, truffle, salt, pepper",
+          updated: 15,
+          original: 30
+        }
       ]
     };
   }

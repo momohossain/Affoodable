@@ -3,8 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   cardContainer: {
     flex: 0.5,
-    backgroundColor: "#fff",
-    paddingBottom: 30
+    backgroundColor: "#fff"
   },
   title: {
     color: "#f64801",
