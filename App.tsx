@@ -1,7 +1,7 @@
-import { createBottomTabNavigator, createAppContainer } from "react-navigation";
-import HomeView from './views/HomeView'
-import SearchView from './views/SearchView'
-import ProfileView from './views/ProfileView'
+import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
+import HomeView from './views/HomeView';
+import SearchView from './views/SearchView';
+import ProfileView from './views/ProfileView';
 
 const AppNavigator = createBottomTabNavigator({
   Home: {
