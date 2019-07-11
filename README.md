@@ -26,7 +26,13 @@ This is a mobile app that was created using React Native. So far we have only be
     Atmosphere category (The most expensive category for the Place Search endpoint).
     - Make sure you enable the `Places API` and the `Maps SDK for iOS` on the API key you create.
 2. Go into the root directory of the repository and create a file called `GoogleAPIKey.js`.
-3. Copy and paste your Google API Key into the file. Do not add any whitespace characters.
+3. Copy and paste the following to the file:
+
+    ```
+    module.exports = "YOUR_API_KEY";
+    ```
+
+    Whilst replacing YOUR_API_KEY with your Google API Key.  Do not add any whitespace characters.
 4. Running `node backend/nodejs/PlacesAPI.js` should return details for 60 Binney St.
 
 ### Frontend - Setup for iOS
