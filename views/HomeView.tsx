@@ -1,22 +1,43 @@
-import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import styles from "../styles/HomeView";
+import React, { Component } from "react";
+import { View, Text, ScrollView } from "react-native";
+import { Button } from "react-native-elements";
+import RestaurantCard from "../components/RestaurantCard";
 
-class HomeView extends Component {
+class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.clicking = this.clicking.bind(this);
+  }
+
+  clicking() {
+    this.props.navigation.push("RestaurantProfileView");
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Home View</Text>
-      </View>
+      <ScrollView style={styles.container}>
+        <View style={styles.header}>
+          <Text style={styles.title}>Welcome back!</Text>
+          <Text style={styles.subtitle}>
+            These restaurants are offering {"\n"}
+            affoodable deals:{"\n"}
+          </Text>
+        </View>
+
+        {this.props.screenProps.restaurants.map((restaurant, index) => (
+          <RestaurantCard
+            key={index}
+            title={restaurant.title}
+            img={restaurant.img}
+            hours={restaurant.hours}
+            timestamp={restaurant.timestamp}
+            clicking={this.clicking}
+          />
+        ))}
+      </ScrollView>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-});
-
-export default HomeView;
+export default Home;
