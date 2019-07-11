@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { View } from "react-native";
 import { createAppContainer } from "react-navigation";
 import MainNavigator from "./components/MainNavigator";
 
@@ -34,6 +33,21 @@ export default class App extends Component {
           hours: "9:00PM",
           timestamp: "20 minutes ago"
         }
+      ],
+      deals: [ {
+        title: "Deal A", 
+        img: require("./img/kendall.png"),
+        description: "Ingredient 1, ingredient 2, ...",
+        updated: 15,
+        original: 30, 
+      },
+      {
+      title: "Deal B", 
+      img: require("./img/kendall.png"),
+      description: "Ingredient 1, ingredient 2, ...",
+      updated: 15,
+      original: 30, 
+      },      
       ]
     };
   }
@@ -41,7 +55,8 @@ export default class App extends Component {
     return (
       <AppNavigator
         screenProps={{
-          restaurants: this.state.restaurants
+          restaurants: this.state.restaurants,
+          deals: this.state.deals
         }}
       />
     );
