@@ -25,8 +25,8 @@ class RestaurantProfileView extends Component {
             <Text>&nbsp;&nbsp;x</Text>
           </TouchableOpacity>
           {/* Main card for restuarants page */}
-          <Card image={require("../img/panda.png")}>
-            <Text style={styles.restaurantTitle}>Restaurant A</Text>
+          <Card image={require("../img/kendall.png")}>
+            <Text style={styles.restaurantTitle}>Kendall House of Pizza</Text>
             <View style={styles.rating}>
               <Rating
                 ratingCount={5}

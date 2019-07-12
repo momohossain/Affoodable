@@ -36,18 +36,18 @@ export default class App extends Component {
       ],
       deals: [
         {
-          title: "Truffle Fries",
-          img: require("./img/kendall.png"),
-          description: "Potatoes, truffle, salt, pepper",
-          updated: 15,
-          original: 30
+          title: "Meatlovers Pizza",
+          img: require("./img/meat.png"),
+          description: "Pepperoni, sausage, ham, chicken",
+          updated: 3,
+          original: 11
         },
         {
-          title: "Truffle Fries",
-          img: require("./img/kendall.png"),
-          description: "Potatoes, truffle, salt, pepper",
-          updated: 15,
-          original: 30
+          title: "Veggie Pizza",
+          img: require("./img/veggie.png"),
+          description: "Tomatoes, carrots, broccoli",
+          updated: 3,
+          original: 11
         }
       ]
     };
