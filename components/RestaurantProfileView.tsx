@@ -4,7 +4,8 @@ import {
   Text,
   TouchableOpacity,
   ScrollView,
-  SafeAreaView
+  SafeAreaView,
+  Image
 } from "react-native";
 import { Card, Rating, Input, Button } from "react-native-elements";
 import DealCard from "../components/DealCard";
@@ -21,8 +22,10 @@ class RestaurantProfileView extends Component {
       <SafeAreaView style={{ flex: 1 }}>
         <ScrollView style={styles.container}>
           <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
-            {/* <MaterialCommunityIcons name="window-close" size={30} /> */}
-            <Text>&nbsp;&nbsp;&nbsp;Close</Text>
+            <Image
+              source={require("../img/close.png")}
+              style={{ width: 15, height: 15, marginLeft: 18 }}
+            />
           </TouchableOpacity>
           {/* Main card for restuarants page */}
           <Card image={require("../img/kendall.png")}>
