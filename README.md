@@ -32,8 +32,8 @@ This is a mobile app that was created using React Native. So far we have only be
     module.exports = "YOUR_API_KEY";
     ```
 
-    Whilst replacing YOUR_API_KEY with your Google API Key.  Do not add any whitespace characters.
-4. Running `node backend/nodejs/PlacesAPI.js` should return details for 60 Binney St.
+    Whilst replacing YOUR_API_KEY with your Google API Key.  Do not add any other characters.
+4. Running `node backend/nodejs/PlaceDetails.js` should return details for 60 Binney St.
 
 ### Frontend - Setup for iOS
 
