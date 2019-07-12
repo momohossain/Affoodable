@@ -50,3 +50,41 @@ This is a mobile app that was created using React Native. So far we have only be
   - Open AppDelegate.m: affoodable/affoodable/AppDelegate.m
   - Replace _YOUR_KEY_HERE_REMOVE_WHEN_PUSHING_ with your google maps API Key
 5. Run app: `react-native run-ios`
+
+## Notes
+
+### Backend - HTTP Requests
+
+The backend must be running in order for requests to work. You can start the backend by running the following commands: 
+
+   ```
+    cd backend/nodejs
+    node server.js
+   ```
+
+From there, you can make a request in the frontend using axios in the following format:
+
+   ```
+    axios._method_("http://localhost:8000/_field_/_query_", _optional_input_)
+   ```
+
+Variables with \_underscores\_ need to be replaced with different things depending on what you are trying to do:
+
+`_method_` : A standard HTTP request type, ie `get` or `post`
+
+`_field_` : One of our database model, ie `customers`, `restaurants`, `accounts`, or `deals`
+
+`_query_` : A route for one of the fields. Available routes can be found in the `Affoodable/backend/nodjs/routes` directory
+
+`_optional_input_` : A json style object for setting properties of an object, only used in post requests
+
+Examples:
+
+- Retrieve active deals for a restaurant with the placeId 12345.
+`axios.get("http://localhost:8000/deals/restaurant/12345")`
+
+- Retrieve all deals (both active and inactive) for a restaurant with the placeId 12345.
+`axios.get("http://localhost:8000/deals/restaurant/12345/all")`
+
+- Create a new restaurant with an accountId of 'abc123' and a placeId of 'def456.
+`axios.post("http://localhost:8000/restaurants/new", {accountId:'abc123', placeId:'def456'})`
