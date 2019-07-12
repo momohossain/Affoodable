@@ -1,41 +1,43 @@
-import React, { Component, Fragment } from 'react';
-import { View, SafeAreaView, TextInput, Text, Dimensions } from 'react-native';
-import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
-import { Card, Rating, Image } from 'react-native-elements';
-import styles from '../styles/SearchView';
+import React, { Component, Fragment } from "react";
+import { View, SafeAreaView, TextInput, Text, Dimensions } from "react-native";
+import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
+import { Card, Rating, Image } from "react-native-elements";
+import styles from "../styles/SearchView";
 import rpv_styles from "../styles/RestaurantProfileView";
 
 class SearchView extends Component {
   state: {
-    search: string,
-    markers: Array<object>,
-    show: boolean
-  }
+    search: string;
+    markers: Array<object>;
+    show: boolean;
+  };
 
   constructor(props: Readonly<{}>) {
     super(props);
 
-    this.handleChangeText = this.handleChangeText.bind(this)
-    this.handlePress = this.handlePress.bind(this)
+    this.handleChangeText = this.handleChangeText.bind(this);
+    this.handlePress = this.handlePress.bind(this);
 
     this.state = {
-      search: '',
-      markers: [{
-        latlng: {
-          latitude: 37.78825,
-          longitude: -122.4324
-        },
-        title: 'Marker1',
-        description: 'This is marker 1'
-      }],
+      search: "",
+      markers: [
+        {
+          latlng: {
+            latitude: 37.78825,
+            longitude: -122.4324
+          },
+          title: "Marker1",
+          description: "This is marker 1"
+        }
+      ],
       show: false
-    }
+    };
   }
 
   handlePress(): void {
-    this.setState((currState) => ({
+    this.setState(currState => ({
       show: !currState.show
-    }))
+    }));
   }
 
   handleChangeText(search: string): void {
@@ -48,19 +50,19 @@ class SearchView extends Component {
     const { markers, show } = this.state;
 
     return (
-      <SafeAreaView style={{flex: 1}}>
+      <SafeAreaView style={{ flex: 1 }}>
         <MapView
-          style={{flex: 1}}
+          style={{ flex: 1 }}
           provider={PROVIDER_GOOGLE}
           initialRegion={{
             latitude: 37.78825,
             longitude: -122.4324,
             latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421,
+            longitudeDelta: 0.0421
           }}
         >
           <TextInput
-            placeholder='Search...'
+            placeholder="Search..."
             style={styles.searchBar}
             onChangeText={this.handleChangeText}
           />
@@ -74,11 +76,11 @@ class SearchView extends Component {
             />
           ))}
         </MapView>
-        {show &&
-          <Card
-            image={require("../img/panda.png")}
-          >
-            <Text style={rpv_styles.restaurantTitle}>Restaurant A</Text>
+        {show && (
+          <Card image={require("../img/kendall.png")}>
+            <Text style={rpv_styles.restaurantTitle}>
+              Kendall House of Pizza
+            </Text>
             <View style={rpv_styles.rating}>
               <Rating
                 ratingCount={5}
@@ -94,7 +96,7 @@ class SearchView extends Component {
             </Text>
             <Text>Open until 9:00PM</Text>
           </Card>
-        }
+        )}
       </SafeAreaView>
     );
   }

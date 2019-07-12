@@ -11,9 +11,17 @@ import { Avatar, ListItem } from "react-native-elements";
 import styles from "../styles/ProfileView";
 
 class ProfileView extends Component {
+  constructor(props) {
+    super(props);
+    this.clicking = this.clicking.bind(this);
+  }
+
+  clicking() {
+    this.props.navigation.push("MyDealsView");
+  }
   render() {
     return (
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: "#f64801" }}>
         <ScrollView style={styles.container}>
           <View style={styles.header}>
             <View style={styles.centered}>
@@ -43,7 +51,7 @@ class ProfileView extends Component {
                 { key: "Logout" }
               ]}
               renderItem={({ item }) => (
-                <TouchableOpacity>
+                <TouchableOpacity onPress={this.clicking}>
                   <ListItem title={item.key} bottomDivider />
                 </TouchableOpacity>
               )}
