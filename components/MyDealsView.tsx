@@ -4,7 +4,8 @@ import {
   Text,
   TouchableOpacity,
   ScrollView,
-  SafeAreaView
+  SafeAreaView,
+  Image
 } from "react-native";
 import { Card, Rating, Input, Button } from "react-native-elements";
 import DealCard from "../components/DealCard";
@@ -22,10 +23,10 @@ class MyDealsView extends Component {
         <ScrollView style={styles.container}>
           <View style={styles.header}>
             <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
-              {/* <MaterialCommunityIcons name="window-close" size={30} /> */}
-              <Text style={{ color: "#fff", marginTop: 10 }}>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Back
-              </Text>
+              <Image
+                source={require("../img/left-arrow.png")}
+                style={{ width: 25, height: 25, marginLeft: 18 }}
+              />
             </TouchableOpacity>
             <Text style={styles.title}>My Deals</Text>
           </View>

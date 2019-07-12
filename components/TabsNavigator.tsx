@@ -1,4 +1,5 @@
 import React from "react";
+import { Image } from "react-native";
 import { createBottomTabNavigator } from "react-navigation";
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 import HomeView from "../views/HomeView";
@@ -11,10 +12,9 @@ const TabsNavigator = createBottomTabNavigator({
     navigationOptions: {
       tabBarLabel: "Home",
       tabBarIcon: ({ tintColor }) => (
-        <MaterialCommunityIcons
-          name="home-outline"
-          size={20}
-          color={tintColor}
+        <Image
+          source={require("../img/house-outline.png")}
+          style={{ width: 15, height: 15, marginBottom: -10 }}
         />
       )
     }
@@ -24,10 +24,9 @@ const TabsNavigator = createBottomTabNavigator({
     navigationOptions: {
       tabBarLabel: "Search",
       tabBarIcon: ({ tintColor }) => (
-        <MaterialCommunityIcons
-          name="map-search-outline"
-          size={20}
-          color={tintColor}
+        <Image
+          source={require("../img/search.png")}
+          style={{ width: 15, height: 15, marginBottom: -10 }}
         />
       )
     }
@@ -37,10 +36,9 @@ const TabsNavigator = createBottomTabNavigator({
     navigationOptions: {
       tabBarLabel: "Profile",
       tabBarIcon: ({ tintColor }) => (
-        <MaterialCommunityIcons
-          name="account-star-outline"
-          size={20}
-          color={tintColor}
+        <Image
+          source={require("../img/avatar.png")}
+          style={{ width: 15, height: 15, marginBottom: -10 }}
         />
       ),
       headerVisible: false
