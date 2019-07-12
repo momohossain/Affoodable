@@ -17,9 +17,6 @@ class Home extends Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        {/* My Reviews */}
-
-        {/* Home */}
         <View style={styles.header}>
           <Text style={styles.title}>Welcome back!</Text>
           <Text style={styles.subtitle}>

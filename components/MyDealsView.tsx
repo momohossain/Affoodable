@@ -18,13 +18,13 @@ class MyDealsView extends Component {
 
   render() {
     return (
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: "#f64801" }}>
         <ScrollView style={styles.container}>
           <View style={styles.header}>
             <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
               {/* <MaterialCommunityIcons name="window-close" size={30} /> */}
               <Text style={{ color: "#fff", marginTop: 10 }}>
-                &nbsp;&nbsp;Back
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Back
               </Text>
             </TouchableOpacity>
             <Text style={styles.title}>My Deals</Text>

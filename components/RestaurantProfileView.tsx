@@ -22,7 +22,7 @@ class RestaurantProfileView extends Component {
         <ScrollView style={styles.container}>
           <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
             {/* <MaterialCommunityIcons name="window-close" size={30} /> */}
-            <Text>&nbsp;&nbsp;x</Text>
+            <Text>&nbsp;&nbsp;&nbsp;Close</Text>
           </TouchableOpacity>
           {/* Main card for restuarants page */}
           <Card image={require("../img/kendall.png")}>

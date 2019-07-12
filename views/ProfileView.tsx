@@ -21,7 +21,7 @@ class ProfileView extends Component {
   }
   render() {
     return (
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: "#f64801" }}>
         <ScrollView style={styles.container}>
           <View style={styles.header}>
             <View style={styles.centered}>
